@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using bingbong.Models;
 
-namespace bingbong.Pages.Gamers
+namespace bingbong.Pages.Gamer2
 {
     public class DeleteModel : PageModel
     {
@@ -19,7 +19,7 @@ namespace bingbong.Pages.Gamers
         }
 
         [BindProperty]
-        public Gamers Gamers { get; set; }
+        public Gamer Gamer { get; set; }
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
@@ -28,9 +28,9 @@ namespace bingbong.Pages.Gamers
                 return NotFound();
             }
 
-            Gamers = await _context.Gamer.FirstOrDefaultAsync(m => m.GamersId == id);
+            Gamer = await _context.Gamer.FirstOrDefaultAsync(m => m.GamersId == id);
 
-            if (Gamers == null)
+            if (Gamer == null)
             {
                 return NotFound();
             }
@@ -44,11 +44,11 @@ namespace bingbong.Pages.Gamers
                 return NotFound();
             }
 
-            Gamers = await _context.Gamer.FindAsync(id);
+            Gamer = await _context.Gamer.FindAsync(id);
 
-            if (Gamers != null)
+            if (Gamer != null)
             {
-                _context.Gamer.Remove(Gamers);
+                _context.Gamer.Remove(Gamer);
                 await _context.SaveChangesAsync();
             }
 

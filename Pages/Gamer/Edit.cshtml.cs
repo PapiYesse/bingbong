@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using bingbong.Models;
 
-namespace bingbong.Pages.Gamers
+namespace bingbong.Pages.Gamer2
 {
     public class EditModel : PageModel
     {
@@ -20,7 +20,7 @@ namespace bingbong.Pages.Gamers
         }
 
         [BindProperty]
-        public Gamers Gamers { get; set; }
+        public Gamer Gamer { get; set; }
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
@@ -29,9 +29,9 @@ namespace bingbong.Pages.Gamers
                 return NotFound();
             }
 
-            Gamers = await _context.Gamer.FirstOrDefaultAsync(m => m.GamersId == id);
+            Gamer = await _context.Gamer.FirstOrDefaultAsync(m => m.GamersId == id);
 
-            if (Gamers == null)
+            if (Gamer == null)
             {
                 return NotFound();
             }
@@ -47,7 +47,7 @@ namespace bingbong.Pages.Gamers
                 return Page();
             }
 
-            _context.Attach(Gamers).State = EntityState.Modified;
+            _context.Attach(Gamer).State = EntityState.Modified;
 
             try
             {
@@ -55,7 +55,7 @@ namespace bingbong.Pages.Gamers
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!GamersExists(Gamers.GamersId))
+                if (!GamersExists(Gamer.GamersId))
                 {
                     return NotFound();
                 }

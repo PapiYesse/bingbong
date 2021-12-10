@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using bingbong.Models;
 
-namespace bingbong.Pages.Gamers
+namespace bingbong.Pages.Gamer2
 {
     public class IndexModel : PageModel
     {
@@ -18,11 +18,11 @@ namespace bingbong.Pages.Gamers
             _context = context;
         }
 
-        public IList<Gamers> Gamers { get;set; }
+        public IList<Gamer> Gamer { get;set; }
 
         public async Task OnGetAsync()
         {
-            Gamers = await _context.Gamer.ToListAsync();
+            Gamer = await _context.Gamer.ToListAsync();
         }
     }
 }

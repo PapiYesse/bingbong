@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using bingbong.Models;
 
-namespace bingbong.Pages.Gamers
+namespace bingbong.Pages.Gamer2
 {
     public class CreateModel : PageModel
     {
@@ -24,7 +24,7 @@ namespace bingbong.Pages.Gamers
         }
 
         [BindProperty]
-        public Gamers Gamers { get; set; }
+        public Gamer Gamer { get; set; }
 
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://aka.ms/RazorPagesCRUD.
@@ -35,7 +35,7 @@ namespace bingbong.Pages.Gamers
                 return Page();
             }
 
-            _context.Gamer.Add(Gamers);
+            _context.Gamer.Add(Gamer);
             await _context.SaveChangesAsync();
 
             return RedirectToPage("./Index");

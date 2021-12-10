@@ -9,6 +9,6 @@ namespace bingbong.Models
                 {
                 }
 
-                public DbSet<Gamers> Gamer {get; set;}
+                public DbSet<Gamer> Gamer {get; set;}
     }
 }

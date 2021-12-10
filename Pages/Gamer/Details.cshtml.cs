@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using bingbong.Models;
 
-namespace bingbong.Pages.Gamers
+namespace bingbong.Pages.Gamer2
 {
     public class DetailsModel : PageModel
     {
@@ -18,7 +18,7 @@ namespace bingbong.Pages.Gamers
             _context = context;
         }
 
-        public Gamers Gamers { get; set; }
+        public Gamer Gamer { get; set; }
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
@@ -27,9 +27,9 @@ namespace bingbong.Pages.Gamers
                 return NotFound();
             }
 
-            Gamers = await _context.Gamer.FirstOrDefaultAsync(m => m.GamersId == id);
+            Gamer = await _context.Gamer.FirstOrDefaultAsync(m => m.GamersId == id);
 
-            if (Gamers == null)
+            if (Gamer == null)
             {
                 return NotFound();
             }

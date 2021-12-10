@@ -17,7 +17,7 @@ namespace bingbong.Pages
 
         private readonly ILogger<IndexModel> _logger;
 
-        public List<Gamers> Gamer {get; set;}
+        public List<Gamer> Gamer {get; set;}
 
         // public SelectList GamerDropDown {get; set;}
 

@@ -1,5 +1,5 @@
 @page
-@model bingbong.Pages.Gamers.EditModel
+@model bingbong.Pages.Gamer.EditModel
 
 @{
     ViewData["Title"] = "Edit";
@@ -13,11 +13,11 @@
     <div class="col-md-4">
         <form method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <input type="hidden" asp-for="Gamers.GamersId" />
+            <input type="hidden" asp-for="Gamer.GamersId" />
             <div class="form-group">
-                <label asp-for="Gamers.gamerTag" class="control-label"></label>
-                <input asp-for="Gamers.gamerTag" class="form-control" />
-                <span asp-validation-for="Gamers.gamerTag" class="text-danger"></span>
+                <label asp-for="Gamer.gamerTag" class="control-label"></label>
+                <input asp-for="Gamer.gamerTag" class="form-control" />
+                <span asp-validation-for="Gamer.gamerTag" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-primary" />

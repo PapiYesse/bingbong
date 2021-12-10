@@ -19,11 +19,11 @@ namespace bingbong.Models
                 }
                 
                 context.Gamer.AddRange(
-                    new Gamers
+                    new Gamer
                     {
                         gamerTag = "__Papi"
                     },
-                    new Gamers
+                    new Gamer
                     {
                         gamerTag = "Tyroil Smoochie"
                     }

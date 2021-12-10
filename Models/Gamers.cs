@@ -2,7 +2,7 @@ using System;
 
 namespace bingbong.Models
 {
-    public class Gamers
+    public class Gamer
     {
         public int GamersId {get; set;} //Primary Key
 

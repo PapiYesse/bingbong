@@ -1,5 +1,5 @@
 @page
-@model bingbong.Pages.Gamers.IndexModel
+@model bingbong.Pages.Gamer.IndexModel
 
 @{
     ViewData["Title"] = "Index";
@@ -14,13 +14,13 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Gamers[0].gamerTag)
+                @Html.DisplayNameFor(model => model.Gamer[0].gamerTag)
             </th>
             <th></th>
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model.Gamers) {
+@foreach (var item in Model.Gamer) {
         <tr>
             <td>
                 @Html.DisplayFor(modelItem => item.gamerTag)

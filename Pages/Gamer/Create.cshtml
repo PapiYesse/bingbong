@@ -1,5 +1,5 @@
 @page
-@model bingbong.Pages.Gamers.CreateModel
+@model bingbong.Pages.Gamer.CreateModel
 
 @{
     ViewData["Title"] = "Create";
@@ -14,9 +14,9 @@
         <form method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="Gamers.gamerTag" class="control-label"></label>
-                <input asp-for="Gamers.gamerTag" class="form-control" />
-                <span asp-validation-for="Gamers.gamerTag" class="text-danger"></span>
+                <label asp-for="Gamer.gamerTag" class="control-label"></label>
+                <input asp-for="Gamer.gamerTag" class="form-control" />
+                <span asp-validation-for="Gamer.gamerTag" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
