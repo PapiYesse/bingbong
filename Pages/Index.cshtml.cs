@@ -4,13 +4,22 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.Extensions.Logging;
+using Microsoft.EntityFrameworkCore;
+using bingbong.Models;
 
 namespace bingbong.Pages
 {
     public class IndexModel : PageModel
     {
+        // private readonly GamerContext _context; //Replaces DB variable
+
         private readonly ILogger<IndexModel> _logger;
+
+        public List<Gamers> Gamer {get; set;}
+
+        // public SelectList GamerDropDown {get; set;}
 
         public IndexModel(ILogger<IndexModel> logger)
         {

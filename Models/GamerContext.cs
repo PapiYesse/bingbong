@@ -7,9 +7,8 @@ namespace bingbong.Models
         public GamerContext (DbContextOptions<GamerContext> options)
                 : base(options)
                 {
-
                 }
 
-                public DbSet<Gamer> Gamers {get; set;}
+                public DbSet<Gamers> Gamer {get; set;}
     }
 }

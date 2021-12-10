@@ -1,0 +1,36 @@
+@page
+@model bingbong.Pages.Gamers.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Gamers[0].gamerTag)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Gamers) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.gamerTag)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.GamersId">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.GamersId">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.GamersId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
